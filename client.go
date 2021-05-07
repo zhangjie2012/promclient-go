@@ -24,7 +24,7 @@ func NewClient(url string, timeout time.Duration) *Client {
 	}
 
 	c := Client{
-		url:     strings.TrimSuffix(url, "/"),
+		url:     strings.TrimRight(url, "/"),
 		timeout: timeout,
 		httpClient: &http.Client{
 			Timeout: timeout,
