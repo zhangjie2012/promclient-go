@@ -30,8 +30,8 @@ type PromResponse struct {
 
 // TSValue value on some timestamp
 type TSValue struct {
-	Timestamp float64
-	Value     float64
+	Timestamp float64 `json:"timestamp"`
+	Value     float64 `json:"value"`
 }
 
 func (t TSValue) String() string {
